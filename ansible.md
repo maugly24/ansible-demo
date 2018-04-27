@@ -16,7 +16,7 @@ ansible --version
 
 # generate SSH keygen
 ```
-ssh-keygen -t rsa -b 4096 -C "vigh.zoltan@codefactory.hu" -f ./ipon
+ssh-keygen -t rsa -b 4096 -C "alma@koretefa.hu" -f ./torkoly
 ```
 
 # create ansible directory
@@ -37,10 +37,10 @@ nano dev
 nano ansible.cfg
 # create ansible.cfg file in ansible directory
 [defaults]
-inventory = /home/zool/Presentations/20170927-nng/ansible/dev
-remote_user = nngcourse
+inventory = /home/mau/ansible/dev
+remote_user = root
 host_key_checking = False
-private_key_file = /home/zool/Presentations/20170927-nng/ipon
+private_key_file = /home/mau/torkoly
 ```
 # run the first command
 ```
@@ -72,7 +72,7 @@ tree nginx
 ---
 - hosts: azure
   vars:
-    - course: NNG
+    - course: Tigra
   become: true
   roles:
     - firewalld
@@ -170,7 +170,7 @@ ansible-playbook azure-server.yml
 
 ### vault
 ```
-echo 'nngpassword' > secret_password
+echo 'tigrafzopassword' > secret_password
 ```
 
 ### create string
